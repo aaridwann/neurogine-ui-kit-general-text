@@ -1,2 +1,2 @@
-export * from './Constants';
+export { default } from './Constants';
 //# sourceMappingURL=index.d.ts.map

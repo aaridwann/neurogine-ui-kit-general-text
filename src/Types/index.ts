@@ -1,6 +1,6 @@
-import { StyleProp, TextStyle } from "react-native";
+import type { StyleProp, TextStyle } from 'react-native';
 
-import Constants from "../Constants";
+import type Constants from '../Constants';
 
 export type VoidFunction = () => void;
 

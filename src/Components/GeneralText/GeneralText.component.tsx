@@ -1,10 +1,11 @@
-import React, { PropsWithChildren } from 'react'
+import React, { type PropsWithChildren } from 'react';
 
-import { Text } from 'react-native'
+import { Text } from 'react-native';
 
-import styles from './GeneralText.component.styles'
+import styles from './GeneralText.component.styles';
 import Constants from '../../Constants';
-import { Props } from '../../Types';
+
+import type { Props } from '../../Types';
 
 const { VARIANT } = Constants;
 

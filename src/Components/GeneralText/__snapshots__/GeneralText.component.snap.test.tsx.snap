@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`General Text renders correctly with all custom props combined 1`] = `
+<Text
+  numberOfLines={2}
+  onPress={[MockFunction]}
+  style={
+    [
+      {
+        "color": "secondary",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      {
+        "opacity": 0.8,
+      },
+    ]
+  }
+>
+  Combined Props Text
+</Text>
+`;
+
+exports[`General Text renders correctly with custom color 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "primary",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+    ]
+  }
+>
+  Colored Text
+</Text>
+`;
+
+exports[`General Text renders correctly with custom style 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      {
+        "fontSize": 16,
+        "marginTop": 10,
+      },
+    ]
+  }
+>
+  Custom Styled Text
+</Text>
+`;
+
+exports[`General Text renders correctly with custom variant 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#1C1C1E",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+    ]
+  }
+>
+  Header Text
+</Text>
+`;
+
+exports[`General Text renders correctly with default props 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+    ]
+  }
+>
+  Default Text
+</Text>
+`;
+
+exports[`General Text renders correctly with numberOfLines prop 1`] = `
+<Text
+  numberOfLines={1}
+  style={
+    [
+      {
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+    ]
+  }
+>
+  Truncated Text Content That Spans Multiple Lines
+</Text>
+`;
+
+exports[`General Text renders correctly with onPress handler 1`] = `
+<Text
+  onPress={[MockFunction]}
+  style={
+    [
+      {
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+    ]
+  }
+>
+  Pressable Text
+</Text>
+`;

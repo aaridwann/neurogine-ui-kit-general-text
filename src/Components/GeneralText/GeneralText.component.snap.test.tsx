@@ -1,31 +1,61 @@
-import React from 'react';
-import { render } from '@testing-library/react-native';
-import { describe, expect, it } from 'vitest';
 import GeneralText from './GeneralText.component';
-import { VARIANT } from '../../Constants';
+import { runSnapshotTests } from '../../Utils/Test/Test.utils';
 
-/**
- * Configurations for testing the GeneralText component. 
- * Each configuration includes a description 
- * and the props to be passed to the component during rendering.
- * @type {Array<{desc: string, props: {children: string, variant: string}}>}
- */
-const configs = [
-  {
-    desc: 'should render GeneralText component with default props',
-    props: {
-      children: 'Default Text',
-      variant: VARIANT.BODY2,
+describe('General Text', () => {
+  const configs = [
+    {
+      props: {
+        children: 'Default Text',
+      },
+      desc: 'renders correctly with default props',
     },
-  },
-];
+    {
+      props: {
+        children: 'Header Text',
+        variant: 'h1',
+      },
+      desc: 'renders correctly with custom variant',
+    },
+    {
+      props: {
+        children: 'Colored Text',
+        color: 'primary',
+      },
+      desc: 'renders correctly with custom color',
+    },
+    {
+      props: {
+        children: 'Truncated Text Content That Spans Multiple Lines',
+        numberOfLines: 1,
+      },
+      desc: 'renders correctly with numberOfLines prop',
+    },
+    {
+      props: {
+        children: 'Custom Styled Text',
+        style: { marginTop: 10, fontSize: 16 },
+      },
+      desc: 'renders correctly with custom style',
+    },
+    {
+      props: {
+        children: 'Pressable Text',
+        onPress: jest.fn(),
+      },
+      desc: 'renders correctly with onPress handler',
+    },
+    {
+      props: {
+        children: 'Combined Props Text',
+        variant: 'caption',
+        color: 'secondary',
+        numberOfLines: 2,
+        style: { opacity: 0.8 },
+        onPress: jest.fn(),
+      },
+      desc: 'renders correctly with all custom props combined',
+    },
+  ];
 
-describe('GeneralText component', () => {
-  configs.forEach(({ desc, props }) => {
-    it(desc, async () => {
-      const { toJSON } = await render(<GeneralText  {...props}>{props.children}</GeneralText>);
-
-      expect(toJSON()).toMatchSnapshot();
-    });
-  });
+  runSnapshotTests(GeneralText, configs);
 });

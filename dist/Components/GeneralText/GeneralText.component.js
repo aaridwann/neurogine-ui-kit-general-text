@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { getTextStyle } from '../../Utils';
-import { VARIANT } from '../../Constants';
+import styles from './GeneralText.component.styles';
+import Constants from '../../Constants';
+const { VARIANT } = Constants;
 /**
  * general text component
  * @param {VariantType} variant - the variant of the text
@@ -12,10 +13,8 @@ import { VARIANT } from '../../Constants';
  * @param { VoidFunction } onPress - optional callback function to handle press events on the text
  * @returns {React.ReactElement} - returns a React element that displays text with the variant
  */
-const GeneralText = ({ variant = VARIANT.BODY2, // Opsional: Berikan default value jika variant tidak di-pass
-style, color, numberOfLines, onPress, children, }) => {
-    const mappedStyle = getTextStyle(variant, color);
-    return (<Text style={[mappedStyle, style]} numberOfLines={numberOfLines} onPress={onPress}>
+const GeneralText = ({ variant = VARIANT.BODY2, style, color, numberOfLines, onPress, children, }) => {
+    return (<Text style={[styles.getTextStyle(variant, color), style]} numberOfLines={numberOfLines} onPress={onPress}>
       {children}
     </Text>);
 };

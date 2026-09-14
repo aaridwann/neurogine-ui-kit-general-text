@@ -1,4 +1,4 @@
-export const VARIANT = {
+const VARIANT = {
     HEADLINE1: 'headline1',
     HEADLINE2: 'headline2',
     HEADLINE3: 'headline3',
@@ -13,12 +13,17 @@ export const VARIANT = {
     TITLE2: 'title2',
     TITLE3: 'title3',
 };
-export const TEXT_COLOR = {
+const TEXT_COLOR = {
     PRIMARY: '#333333',
     SECONDARY: '#666666',
+    TEXT_PRIMARY: '#1C1C1E',
+    TEXT_SECONDARY: '#8E8E93',
+    DANGER: '#FF3B30',
+    SUCCESS: '#34C759',
+    WHITE: '#FFFFFF',
     TERTIARY: '#999999',
 };
-export const FONT_SIZE = {
+const FONT_SIZE = {
     HEADLINE1: 34,
     HEADLINE2: 30,
     HEADLINE3: 26,
@@ -33,7 +38,7 @@ export const FONT_SIZE = {
     TITLE2: 20,
     TITLE3: 18,
 };
-export const FONT_WEIGHT = {
+const FONT_WEIGHT = {
     HEADLINE1: 'bold',
     HEADLINE2: 'bold',
     HEADLINE3: 'bold',

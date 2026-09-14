@@ -1,12 +1,13 @@
 import { StyleProp, TextStyle } from "react-native";
-import { VARIANT } from "../Constants";
+import Constants from "../Constants";
 export type VoidFunction = () => void;
-export type VariantType = ValueOf<typeof VARIANT> | string;
+export type VariantType = ValueOf<typeof Constants.VARIANT>;
+export type TextColor = ValueOf<typeof Constants.TEXT_COLOR>;
 type ValueOf<T> = T[keyof T];
 export interface Props {
-    variant: VariantType;
+    variant?: VariantType;
     style?: StyleProp<TextStyle>;
-    color?: string;
+    color?: TextColor;
     numberOfLines?: number;
     onPress?: VoidFunction;
 }
